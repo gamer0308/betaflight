@@ -140,7 +140,7 @@ void pgResetFn_serialConfig(serialConfig_t *serialConfig)
 
 #if defined(USE_VCP) && defined(USE_MSP_UART)
     if (serialConfig->portConfigs[0].identifier == SERIAL_PORT_USB_VCP) {
-        serialPortConfig_t * uart1Config = serialFindPortConfiguration(SERIAL_PORT_USART1);
+        serialPortConfig_t * uart1Config = serialFindPortConfiguration(SERIAL_PORT_USART6);
         if (uart1Config) {
             uart1Config->functionMask = FUNCTION_MSP;
         }
